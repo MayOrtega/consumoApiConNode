@@ -10,7 +10,7 @@ router.get('/', async(req, res) => {
         const limit = req.query.limit || 10;
         const response = await axios.get(`https://randomuser.me/api/?results=${limit}`);
      
-        const uniqueResults = response.data.results.filter(user => !uniqueUsers.had(user.login.uuid));
+        const uniqueResults = response.data.results.filter(user => !uniqueUsers.has(user.login.uuid));
 
         uniqueResults.forEach(user => uniqueUsers.add(user.login.uuid));
 
@@ -21,7 +21,7 @@ router.get('/', async(req, res) => {
             res.send(formattedUsers);
         } else {
             const formattedUsers = JSON.stringify(uniqueResults, null, 2)
-            res.setHeader('content-type', 'applications/json');
+            res.setHeader('content-type', 'application/json');
             res.send(formattedUsers);
           }
         } catch (error) {

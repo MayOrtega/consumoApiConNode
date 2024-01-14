@@ -1,6 +1,6 @@
 const express = require('express');
 const usersRouter = require('./router/users');
-const drinksRouter = require('./router/drinks');
+const drinksRouter = require('./router/drink');
 
 const app = express();
 const port = 3000;
