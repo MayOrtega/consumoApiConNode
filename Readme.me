@@ -1,21 +1,44 @@
-# Proyecto Node - Express: Consumo de Datos de APIs
+# Proyecto Node.js: Consumo de Datos de randomuser.me y thecocktaildb 🚀
 
-## Descripción 🚀
-Este proyecto Node.js utiliza datos de dos APIs externas (`randomuser.me` y `thecocktaildb`) para proporcionar información sobre usuarios y sus bebidas favoritas. Las rutas de la aplicación permiten acceder y filtrar estos datos de diversas maneras.
+## Descripción
+Este proyecto Node.js se centra en el consumo de datos de dos APIs externas, `randomuser.me` y `thecocktaildb`, para proporcionar información sobre usuarios y sus bebidas favoritas. La aplicación expone tres rutas distintas y admite dos parámetros de consulta para una experiencia versátil.
 
-## Configuración del Proyecto 🛠️
+## Configuración del Proyecto
 
-### Instalación de Dependencias
 ```bash
+# Instalación de Dependencias
 npm install
 
-### Ejecución del Proyecto
+# Ejecución del Proyecto
 node index.js
 
-##Rutas y Funcionalidades 🌐
-1. Obtener Usuarios Aleatorios: GET http://localhost:3000/users?limit=1
-2. Categorización por Género: GET http://localhost:3000/users?categorize=gender
-3. Obtener Usuario y Bebida Favorita:GET http://localhost:3000/users/drink
+Rutas y Funcionalidades 🌐
+1. Obtener Usuarios Aleatorios
+GET http://localhost:3000/users?limit=10
 
+Parámetros de consulta:
+limit: Limita la cantidad de usuarios devueltos.
 
+2. Categorización por Género
+GET http://localhost:3000/users?categorize=gender
 
+Parámetros de consulta:
+categorize: Agrupa a los usuarios por género.
+
+3. Obtener Usuario y Bebida Favorita
+GET http://localhost:3000/users/drink
+
+Proporciona información sobre un usuario aleatorio y su bebida favorita.
+
+Ejemplos de Uso
+Obtener 3 Usuarios Aleatorios
+http://localhost:3000/users?limit=3
+
+Obtener Usuarios Categorizados por Género
+url http://localhost:3000/users?categorize=gender
+
+Obtener Usuario y Bebida Favorita
+url http://localhost:3000/users/drink
+
+Contribuciones 🤝
+¡Las contribuciones son bienvenidas! Si tienes alguna sugerencia, problema o mejora, no dudes en abrir un problema o enviar un pull request.
